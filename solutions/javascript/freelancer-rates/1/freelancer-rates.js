@@ -1,6 +1,6 @@
 // @ts-check
 
-const hoursPerDay = 8;
+const rateDay = 8;
 const daysPerMonth = 22;
 
 /**
@@ -10,7 +10,7 @@ const daysPerMonth = 22;
  * @returns {number} the rate per day
  */
 export function dayRate(ratePerHour) {
-  return ratePerHour * hoursPerDay;
+  return ratePerHour * rateDay;
 }
 
 /**
@@ -21,7 +21,7 @@ export function dayRate(ratePerHour) {
  * @returns {number} the number of days
  */
 export function daysInBudget(budget, ratePerHour) {
-  return Math.floor(budget / (hoursPerDay * ratePerHour));
+  return Math.floor(budget /  rateDay * ratePerHour));
 }
 
 /**
@@ -33,7 +33,7 @@ export function daysInBudget(budget, ratePerHour) {
  * @returns {number} the rounded up discounted rate
  */
 export function priceWithMonthlyDiscount(ratePerHour, numDays, discount) {
-  const dailyRate = ratePerHour * hoursPerDay;
+  const dailyRate = ratePerHour * rateDay;
   const fullMonths = Math.floor(numDays / daysPerMonth);
   const remainingDays = numDays % daysPerMonth;
 
