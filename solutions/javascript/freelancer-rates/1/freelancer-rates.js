@@ -1,12 +1,5 @@
 // @ts-check
 
-
-/**
- * The day rate, given a rate per hour
- *
- * @param {number} ratePerHour
- * @returns {number} the rate per day
- */
 const hoursPerDay = 8;
 const daysPerMonth = 22;
 export function dayRate(ratePerHour) {
